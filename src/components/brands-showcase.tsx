@@ -1,12 +1,10 @@
 "use client"
 
-import { useState } from "react"
 import { brands } from "@/lib/car-data"
 import Image from "next/image"
 import Link from "next/link"
 
 export function BrandsShowcase() {
-  const [hoveredBrand, setHoveredBrand] = useState<string | null>(null)
 
   return (
     <section className="brands-section">
@@ -25,8 +23,6 @@ export function BrandsShowcase() {
             <Link key={brand.id} href={`/catalog?brand=${brand.id}`} className="brand-card-link">
               <div
                 className="group brand-card"
-                onMouseEnter={() => setHoveredBrand(brand.id)}
-                onMouseLeave={() => setHoveredBrand(null)}
                 style={{
                   animationDelay: `${index * 0.1}s`,
                 }}

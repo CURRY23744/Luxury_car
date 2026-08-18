@@ -194,3 +194,7 @@ export function UsersPage() {
     </div>
   )
 }
+
+export default function UsersPageRoute() {
+  return <UsersPage />
+}

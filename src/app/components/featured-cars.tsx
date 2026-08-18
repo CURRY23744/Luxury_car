@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { cars } from "@/lib/car-data"
@@ -9,7 +8,6 @@ import Link from "next/link"
 import Image from "next/image"
 
 export function FeaturedCars() {
-  const [hoveredCar, setHoveredCar] = useState<string | null>(null)
   const featuredCars = cars.filter((car) => car.isFeatured)
 
   return (
@@ -20,7 +18,7 @@ export function FeaturedCars() {
             Featured <span className="featured-title-red">Collection</span>
           </h2>
           <p className="featured-description">
-            Discover our handpicked selection of the world's most extraordinary vehicles
+            Discover our handpicked selection of the world&apos;s most extraordinary vehicles
           </p>
         </div>
 
@@ -29,8 +27,6 @@ export function FeaturedCars() {
             <div
               key={car.id}
               className="group featured-card"
-              onMouseEnter={() => setHoveredCar(car.id)}
-              onMouseLeave={() => setHoveredCar(null)}
               style={{
                 animationDelay: `${index * 0.1}s`,
               }}
@@ -58,7 +54,7 @@ export function FeaturedCars() {
                   <button className="featured-action-button">
                     <Heart className="featured-action-icon" />
                   </button>
-                  <Link href={`/cars/${car.id}`}>
+                  <Link href={`/catalog/${car.id}`}>
                     <button className="featured-action-button">
                       <Eye className="featured-action-icon" />
                     </button>
@@ -102,7 +98,7 @@ export function FeaturedCars() {
                 </div>
 
                 {/* CTA Button */}
-                <Link href={`/cars/${car.id}`} className="featured-cta-link">
+                <Link href={`/catalog/${car.id}`} className="featured-cta-link">
                   <Button className="group featured-cta-button">
                     View Details
                     <ArrowRight className="featured-cta-icon" />

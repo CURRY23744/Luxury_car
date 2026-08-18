@@ -15,3 +15,7 @@ export function Homepage() {
     </div>
   )
 }
+
+export default function HomepageRoute() {
+  return <Homepage />
+}

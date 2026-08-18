@@ -16,7 +16,7 @@ export function DashboardPage() {
 
       <div>
         <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
-        <p className="text-muted-foreground">Vue d'ensemble de votre plateforme</p>
+        <p className="text-muted-foreground">Vue d&apos;ensemble de votre plateforme</p>
       </div>
 
       <StatsCards stats={mockStats} />
@@ -35,4 +35,8 @@ export function DashboardPage() {
       <CategoryChart data={mockCategoryData} />
     </div>
   )
+}
+
+export default function DashboardPageRoute() {
+  return <DashboardPage />
 }

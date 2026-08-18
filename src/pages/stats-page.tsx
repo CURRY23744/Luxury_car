@@ -55,3 +55,7 @@ export function StatsPage() {
     </div>
   )
 }
+
+export default function StatsPageRoute() {
+  return <StatsPage />
+}

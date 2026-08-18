@@ -235,3 +235,7 @@ export function ProductsPage() {
     </div>
   )
 }
+
+export default function ProductsPageRoute() {
+  return <ProductsPage />
+}

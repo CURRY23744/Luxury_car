@@ -147,7 +147,7 @@ export function ProductDetailModal({ product, open, onOpenChange }: ProductDetai
           <TabsContent value="inventory" className="space-y-4">
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Gestion d'inventaire</CardTitle>
+                <CardTitle className="text-lg">Gestion d&apos;inventaire</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">

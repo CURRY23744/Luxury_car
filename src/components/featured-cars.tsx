@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { cars } from "@/lib/car-data"
@@ -9,7 +8,6 @@ import Link from "next/link"
 import Image from "next/image"
 
 export function FeaturedCars() {
-  const [hoveredCar, setHoveredCar] = useState<string | null>(null)
   const featuredCars = cars.filter((car) => car.isFeatured)
 
   return (

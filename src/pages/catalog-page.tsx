@@ -245,3 +245,7 @@ export function CatalogPage() {
     </div>
   )
 }
+
+export default function CatalogPageRoute() {
+  return <CatalogPage />
+}
