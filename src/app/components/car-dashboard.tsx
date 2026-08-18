@@ -66,10 +66,6 @@ export function CarDashboard() {
     }))
   }
 
-  const handleGearChange = (newGear: string) => {
-    setCarData((prev) => ({ ...prev, gear: newGear }))
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-hidden">
       {/* Animated Background */}

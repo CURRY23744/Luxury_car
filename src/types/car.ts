@@ -42,3 +42,41 @@ export interface GaugeProps {
   color?: string
   size?: number
 }
+
+export interface CarData {
+  speed: number
+  rpm: number
+  fuel: number
+  temperature: number
+  gear: string
+  odometer: number
+  tripDistance: number
+  engineStatus: boolean
+  headlights: boolean
+  turnSignals: {
+    left: boolean
+    right: boolean
+  }
+  doors: {
+    frontLeft: boolean
+    frontRight: boolean
+    rearLeft: boolean
+    rearRight: boolean
+  }
+  climate: {
+    temperature: number
+    fanSpeed: number
+    ac: boolean
+  }
+  music: {
+    isPlaying: boolean
+    track: string
+    artist: string
+    volume: number
+  }
+  navigation: {
+    destination: string
+    eta: string
+    distance: string
+  }
+}
