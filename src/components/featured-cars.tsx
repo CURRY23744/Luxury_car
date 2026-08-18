@@ -18,7 +18,7 @@ export function FeaturedCars() {
             Featured <span className="featured-title-red">Collection</span>
           </h2>
           <p className="featured-description">
-            Discover our handpicked selection of the world's most extraordinary vehicles
+            Discover our handpicked selection of the world&apos;s most extraordinary vehicles
           </p>
         </div>
 
@@ -27,8 +27,6 @@ export function FeaturedCars() {
             <div
               key={car.id}
               className="group featured-card"
-              onMouseEnter={() => setHoveredCar(car.id)}
-              onMouseLeave={() => setHoveredCar(null)}
               style={{
                 animationDelay: `${index * 0.1}s`,
               }}

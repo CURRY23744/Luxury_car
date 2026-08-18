@@ -14,7 +14,7 @@ export function BrandsShowcase() {
             Luxury <span className="brands-title-red">Brands</span>
           </h2>
           <p className="brands-description">
-            Explore vehicles from the world's most prestigious automotive manufacturers
+            Explore vehicles from the world&apos;s most prestigious automotive manufacturers
           </p>
         </div>
 

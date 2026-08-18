@@ -7,7 +7,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import type { User } from "@/types"
 import { Calendar, Mail, Shield, Activity, ShoppingBag } from "lucide-react"
-import { useRouter } from "next/navigation"
 import { useApp } from "@/contexts/app-context"
 
 interface UserDetailModalProps {
@@ -17,7 +16,6 @@ interface UserDetailModalProps {
 }
 
 export function UserDetailModal({ user, open, onOpenChange }: UserDetailModalProps) {
-  const router = useRouter()
   const { addNotification } = useApp()
 
   if (!user) return null
@@ -61,7 +59,7 @@ export function UserDetailModal({ user, open, onOpenChange }: UserDetailModalPro
               <div className="text-sm text-muted-foreground">{user.email}</div>
             </div>
           </DialogTitle>
-          <DialogDescription>Détails complets de l'utilisateur</DialogDescription>
+          <DialogDescription>Détails complets de l&apos;utilisateur</DialogDescription>
         </DialogHeader>
 
         <Tabs defaultValue="info" className="w-full">
