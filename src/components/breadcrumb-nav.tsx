@@ -18,10 +18,10 @@ type BreadcrumbItem = {
 }
 
 type BreadcrumbNavProps = {
-  items: BreadcrumbItem[]
+  items?: BreadcrumbItem[]
 }
 
-export function BreadcrumbNav({ items }: BreadcrumbNavProps) {
+export function BreadcrumbNav({ items }: BreadcrumbNavProps = {}) {
   const pathname = usePathname()
   const pathSegments = pathname?.split("/").filter(Boolean) ?? []
 
@@ -30,23 +30,39 @@ export function BreadcrumbNav({ items }: BreadcrumbNavProps) {
       <Link href="/" className="flex items-center hover:text-foreground">
         <Home className="h-4 w-4" />
       </Link>
-      {pathSegments.map((segment, index) => {
-        const path = "/" + pathSegments.slice(0, index + 1).join("/")
-        const isLast = index === pathSegments.length - 1
+      {items && items.length > 0
+        ? items.map((item, index) => {
+            const isLast = index === items.length - 1
+            return (
+              <div key={item.href} className="flex items-center">
+                <ChevronRight className="h-4 w-4 mx-1" />
+                {isLast ? (
+                  <span className="font-medium text-foreground">{item.title}</span>
+                ) : (
+                  <Link href={item.href} className="hover:text-foreground">
+                    {item.title}
+                  </Link>
+                )}
+              </div>
+            )
+          })
+        : pathSegments.map((segment, index) => {
+            const path = "/" + pathSegments.slice(0, index + 1).join("/")
+            const isLast = index === pathSegments.length - 1
 
-        return (
-          <div key={path} className="flex items-center">
-            <ChevronRight className="h-4 w-4 mx-1" />
-            {isLast ? (
-              <span className="font-medium text-foreground">{pathNames[path] || segment}</span>
-            ) : (
-              <Link href={path} className="hover:text-foreground">
-                {pathNames[path] || segment}
-              </Link>
-            )}
-          </div>
-        )
-      })}
+            return (
+              <div key={path} className="flex items-center">
+                <ChevronRight className="h-4 w-4 mx-1" />
+                {isLast ? (
+                  <span className="font-medium text-foreground">{pathNames[path] || segment}</span>
+                ) : (
+                  <Link href={path} className="hover:text-foreground">
+                    {pathNames[path] || segment}
+                  </Link>
+                )}
+              </div>
+            )
+          })}
     </nav>
   )
 }
