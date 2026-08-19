@@ -4,7 +4,7 @@ import { useAuth } from "@/contexts/auth-context"
 import { LoginForm } from "@/components/login-form"
 import { Sidebar } from "@/components/sidebar"
 import { Header } from "@/components/header"
-import { StatsPage } from "@/pages/stats-page"
+import { StatsPage } from "@/views/stats-page"
 import { Notifications } from "@/components/notifications"
 
 export default function Stats() {

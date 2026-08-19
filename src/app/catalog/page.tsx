@@ -2,7 +2,7 @@
 
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { CatalogPage } from "@/pages/catalog-page"
+import { CatalogPage } from "@/views/catalog-page"
 
 export default function Catalog() {
   return (

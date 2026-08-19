@@ -4,7 +4,7 @@ import { useAuth } from "@/contexts/auth-context"
 import { LoginForm } from "@/components/login-form"
 import { Sidebar } from "@/components/sidebar"
 import { Header } from "@/components/header"
-import { ProductsPage } from "@/pages/products-page"
+import { ProductsPage } from "@/views/products-page"
 import { Notifications } from "@/components/notifications"
 
 export default function Products() {

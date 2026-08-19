@@ -11,7 +11,7 @@ import { BreadcrumbNav } from "@/components/breadcrumb-nav"
 export function StatsPage() {
   return (
     <div className="space-y-6">
-      <BreadcrumbNav />
+      <BreadcrumbNav items={[{ title: "Dashboard", href: "/dashboard" }, { title: "Statistiques", href: "/dashboard/stats", active: true }]} />
 
       <div>
         <h2 className="text-3xl font-bold tracking-tight">Statistiques</h2>

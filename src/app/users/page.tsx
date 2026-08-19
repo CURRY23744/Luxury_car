@@ -4,7 +4,7 @@ import { useAuth } from "@/contexts/auth-context"
 import { LoginForm } from "@/components/login-form"
 import { Sidebar } from "@/components/sidebar"
 import { Header } from "@/components/header"
-import { UsersPage } from "@/pages/users-page"
+import { UsersPage } from "@/views/users-page"
 import { Notifications } from "@/components/notifications"
 
 export default function Users() {
