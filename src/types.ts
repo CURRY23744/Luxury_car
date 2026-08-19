@@ -42,7 +42,7 @@ export interface DashboardStats {
 
 export interface ChartData {
   name: string
-  value: number
+  value?: number
   revenue?: number
   users?: number
   orders?: number
