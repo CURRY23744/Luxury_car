@@ -2,7 +2,7 @@
 
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { Homepage } from "@/pages/homepage"
+import { Homepage } from "@/view/homepage"
 
 export default function Page() {
   return (
